@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>users</h1>
+
+    <input class="name" type="text" placeholder="name...." />
+    <input class="age" type="text" placeholder="age...." />
+    <button class="btn">add</button>
+    <input class="search" type="text" placeholder="search with user age" />
+    <button>Search</button>
+    <ul class="users"></ul>
+
+    <script>
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyBeVFErAvxkmuf6aZ4lJK_GJWuGXoJkCnc",
+        authDomain: "my-project-212e8.firebaseapp.com",
+        databaseURL: "https://my-project-212e8.firebaseio.com",
+        projectId: "my-project-212e8",
+        storageBucket: "my-project-212e8.appspot.com",
+        messagingSenderId: "381377488048",
+        appId: "1:381377488048:web:0e00852e3f548c004d8775",
+        measurementId: "G-3WNCC9MXNC",
+      };
+      firebase.initializeApp(firebaseConfig);
+      const data = firebase.firestore();
+      data.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>
